@@ -1,0 +1,16 @@
+{
+  "name": "efrags",
+  "version": "0.0.0",
+  "authors": [
+    "Dan Hughes <hi@d.anhugh.es>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "homepage": "efragments.com",
+  "private": true,
+  "dependencies": {
+    "markdown": "~0.5.0",
+    "page": "visionmedia/page.js#~1.6.3"
+  }
+}
