@@ -1,23 +1,38 @@
 $(function() {
 	page('/', function(ctx, next) {
-		console.log('fetch text file here');
+		$.get('/stories.txt', function(data) {
+
+			links = data.split('\n').map(function(l) {return l.trim();});
+
+			if (links[links.length-1] === '') {
+				links.pop();
+			}
+
+			var count = 0;
+			var assembled = '';
+
+			links.forEach(function(link) {
+				$.get('/stories/' + link + '.md', function(data) {
+
+					var title = $(markdown.toHTML(data))[0].textContent;
+
+					assembled += '<p><a href="/story/' + link + '">' + title + '</a></p>\n';
+
+					if (++count === links.length) {
+						$('#container').html(assembled);
+					}
+				});
+			});
+		});
 	});
 
 	page('/story/:title', function(ctx, next) {
-		console.log(ctx.params.title);
+		var title = ctx.params.title;
+		console.log(title);
+		$.get('/stories/' + title + '.md', function(data) {
+			$('#container').html(markdown.toHTML(data));
+		});
 	});
 
 	page();
-	// if (window.location.hash) {
-	// 	var hash = window.location.hash.substring(1);
-	// 	$.ajax({
-	// 		url: '/stories/'+ hash + '.md',
-	// 		success: function(data) {
-	// 			$('#container').html(markdown.toHTML(data));
-	// 		},
-	// 		error: function() {
-	// 			$('#container').html('Unable to load story. <a href="/">Back</a>');
-	// 		}
-	// 	});
-	// }
 });

@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "markdown": "~0.5.0",
-    "page": "visionmedia/page.js#~1.6.3"
+    "page": "visionmedia/page.js#~1.6.3",
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }
