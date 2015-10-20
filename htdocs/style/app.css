@@ -1,20 +1,20 @@
 
-html { font-size: 18px; transition: font-size 0.25s;}
+html { font-size: 17px; transition: font-size 0.25s;}
 @media screen and (min-width: 480px) {
-	html { font-size: 20px; }
+	html { font-size: 19px; }
 }
 @media screen and (min-width: 768px) {
-	html { font-size: 22px; }
+	html { font-size: 21px; }
 }
-@media screen and (min-width: 1024px) {
+/*@media screen and (min-width: 1024px) {
 	html { font-size: 24px; }
-}
+}*/
 
 body {
 	font-family: Lato, sans-serif;
 	margin: auto;
 	max-width: 768px;
-	color: #333;
+	color: #555;
 	padding: 1em;
 }
 
@@ -45,7 +45,15 @@ a:hover {
 	opacity: 0.5;
 }
 
-h1, h2 {
+.nav-list a {
+	display: block;
+}
+
+.nav-list em {
+	display: block;
+}
+
+h1, h2, h3 {
 	font-family: Lato, sans-serif;
 	font-weight: normal;
 }
@@ -54,10 +62,6 @@ header h1 {
 	letter-spacing: 20px;
 	color: transparent;
 	text-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-article h1 {
-	font-size: 2.828rem;
 }
 
 article img {

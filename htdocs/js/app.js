@@ -2,34 +2,39 @@ $(function() {
 	page('/', function(ctx, next) {
 		$.get('/stories.txt', function(data) {
 
-			links = data.split('\n').map(function(l) {return l.trim();});
+			links = data.split('\n').map(function(l) { return l.trim(); });
 
-			if (links[links.length-1] === '') {
+			if (!links[links.length-1]) {
+				// The last link might be a blank line, if so ignore it
 				links.pop();
 			}
 
-			var count = 0;
-			var assembled = '';
+			var template = '<a href="{{link}}"><h3>{{title}}</h3>{{#date}}<em>{{date}}</em>{{/date}}</a>';
 
-			links.forEach(function(link) {
-				$.get('/stories/' + link + '.md', function(data) {
+			var storyRequests = links.map(function(link) {
+				return $.get('/stories/' + link + '.md');
+			});
 
-					var title = $(markdown.toHTML(data))[0].textContent;
-
-					assembled += '<p><a href="/story/' + link + '">' + title + '</a></p>\n';
-
-					if (++count === links.length) {
-						$('#container').html(assembled);
-					}
+			$.when.apply(this, storyRequests).done(function() {
+				var results = Array.prototype.slice.call(arguments);
+				var stories = results.map(function(result, index) {
+					var rendered = $('<div>' + markdown.toHTML(result[0]) + '</div>');
+					return {
+						title: rendered.find('h1').text(),
+						date: rendered.find('em').text(),
+						link: '/story/' + links[index]
+					};
 				});
+
+				$('#container').html(stories.map(function(story) {
+					return Mustache.render(template, story);
+				}).join("\n")).addClass('nav-list');
 			});
 		});
 	});
 
 	page('/story/:title', function(ctx, next) {
-		var title = ctx.params.title;
-		console.log(title);
-		$.get('/stories/' + title + '.md', function(data) {
+		$.get('/stories/' + ctx.params.title + '.md', function(data) {
 			$('#container').html(markdown.toHTML(data));
 		});
 	});
