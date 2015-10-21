@@ -12,7 +12,6 @@
   "dependencies": {
     "markdown": "~0.5.0",
     "page": "visionmedia/page.js#~1.6.3",
-    "normalize-css": "normalize.css#~3.0.3",
-    "mustache.js": "mustache#~2.2.0"
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }

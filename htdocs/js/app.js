@@ -26,8 +26,12 @@ $(function() {
 					};
 				});
 
+				// Render out all the objects into HTML
 				$('#container').html(stories.map(function(story) {
-					return Mustache.render(template, story);
+					return '<a href="' + story.link + '">' +
+						'<h3>' + story.title + '</h3>' +
+						(story.date ? '<em>' + story.date + '</em>' : '') +
+						'</a>';
 				}).join("\n")).addClass('nav-list');
 			});
 		});
