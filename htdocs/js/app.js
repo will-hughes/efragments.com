@@ -11,13 +11,17 @@ $(function() {
 
 			var template = '<a href="{{link}}"><h3>{{title}}</h3>{{#date}}<em>{{date}}</em>{{/date}}</a>';
 
+			// Array of AJAX requests
 			var storyRequests = links.map(function(link) {
 				return $.get('/stories/' + link + '.md');
 			});
 
+			// When all requests are done, create an array of story objects
 			$.when.apply(this, storyRequests).done(function() {
 				var results = Array.prototype.slice.call(arguments);
 				var stories = results.map(function(result, index) {
+
+					// Search inside the rendered markdown for certain elements
 					var rendered = $('<div>' + markdown.toHTML(result[0]) + '</div>');
 					return {
 						title: rendered.find('h1').text(),
@@ -39,7 +43,7 @@ $(function() {
 
 	page('/story/:title', function(ctx, next) {
 		$.get('/stories/' + ctx.params.title + '.md', function(data) {
-			$('#container').html(markdown.toHTML(data));
+			$('#container').html(markdown.toHTML(data)).removeClass();
 		});
 	});
 
