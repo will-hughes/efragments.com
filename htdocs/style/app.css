@@ -51,6 +51,7 @@ a:hover {
 
 .nav-list em {
 	display: block;
+	opacity: 0.5;
 }
 
 h1, h2, h3 {
