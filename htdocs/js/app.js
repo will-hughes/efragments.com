@@ -1,6 +1,6 @@
 $(function() {
 	page('/', function(ctx, next) {
-		$.get('/stories.txt', function(data) {
+		$.get('/front.txt', function(data) {
 
 			links = data.split('\n').map(function(l) { return l.trim(); });
 
@@ -9,36 +9,61 @@ $(function() {
 				links.pop();
 			}
 
-			// Array of AJAX requests
-			var storyRequests = links.map(function(link) {
-				return $.get('/stories/' + link + '.md');
+			links = links.map(function(link) {
+				var isSeries = /^series/.test(link);
+				return {
+					link: link,
+					type: (isSeries ? 'series' : 'story'),
+					req: (isSeries ? true : $.get('/stories/' + link + '.md'))
+				};
 			});
 
 			// When all requests are done
-			$.when.apply(this, storyRequests).then(function() {
+			$.when.apply(this, links.map(function(l) { return l.req; })).then((function() {
 
-				// Convert arguments pseudo-array to actual array, so we can .map it
-				// http://stackoverflow.com/a/960870
-				var results = Array.prototype.slice.call(arguments);
+				var results = Array.prototype.slice.call(this);
 
 				// Create story objects by searching inside the rendered markdown for certain elements
-				var stories = results.map(function(result, index) {
-					var rendered = $('<div>' + markdown.toHTML(result[0]) + '</div>');
-					return {
-						title: rendered.find('h1').text(),
-						date: rendered.find('em').text(),
-						link: '/story/' + links[index]
+				var stories = results.map(function(result) {
+					var ret;
+					var renderFunc = function() {
+						return '<a href="' + this.link + '">' +
+						'<h3>' + this.title + '</h3>' +
+						(this.date ? '<em>' + this.date + '</em>' : '') +
+						'</a>';
 					};
+
+					if (result.type === 'story') {
+						var rendered = $('<div>' + markdown.toHTML(result.req.responseText) + '</div>');
+
+						ret = {
+							title: rendered.find('h1').text(),
+							date: rendered.find('em').text(),
+							link: '/story/' + result.link,
+							render: renderFunc
+						};
+					} else {
+						var number = result.link.split('series-')[1];
+						ret = {
+							number: number,
+							title: 'Series ' + number,
+							link: '/series/' + number,
+							render: renderFunc
+						};
+					}
+
+					return ret;
 				});
 
 				// Render out all the objects into HTML
-				$('#container').html(stories.map(function(story) {
-					return '<a href="' + story.link + '">' +
-						'<h3>' + story.title + '</h3>' +
-						(story.date ? '<em>' + story.date + '</em>' : '') +
-						'</a>';
-				}).join("\n")).addClass('nav-list');
-			});
+				$('#container')
+					.html(stories.map(function(story) {
+						return story.render();
+					}).join("\n"))
+					.removeClass()
+					.addClass('nav-list');
+
+			}).bind(links));
 		});
 	});
 
@@ -46,6 +71,28 @@ $(function() {
 		$.get('/stories/' + ctx.params.title + '.md', function(data) {
 			$('#container').html(markdown.toHTML(data)).removeClass();
 		});
+	});
+
+	page('/series/:series', function(ctx, next) {
+		var ids = [];
+		for (var i = 1; i <= 32; i++) {
+			var num = i;
+			if (i < 10) {
+				num = '0' + i;
+			}
+			ids[i] = '' + num;
+		}
+
+		var letter = 'abcdefghijklmnopqrstuvwxyz'[ctx.params.series-1];
+
+		var srcs = ids.map(function(id) {
+			return '<img src="/images/series-' + ctx.params.series + '/' + letter + id + '.gif">';
+		}).join("\n");
+
+		$('#container')
+			.html(srcs)
+			.removeClass()
+			.addClass('series');
 	});
 
 	page();
