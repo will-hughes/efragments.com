@@ -9,19 +9,20 @@ $(function() {
 				links.pop();
 			}
 
-			var template = '<a href="{{link}}"><h3>{{title}}</h3>{{#date}}<em>{{date}}</em>{{/date}}</a>';
-
 			// Array of AJAX requests
 			var storyRequests = links.map(function(link) {
 				return $.get('/stories/' + link + '.md');
 			});
 
-			// When all requests are done, create an array of story objects
-			$.when.apply(this, storyRequests).done(function() {
-				var results = Array.prototype.slice.call(arguments);
-				var stories = results.map(function(result, index) {
+			// When all requests are done
+			$.when.apply(this, storyRequests).then(function() {
 
-					// Search inside the rendered markdown for certain elements
+				// Convert arguments pseudo-array to actual array, so we can .map it
+				// http://stackoverflow.com/a/960870
+				var results = Array.prototype.slice.call(arguments);
+
+				// Create story objects by searching inside the rendered markdown for certain elements
+				var stories = results.map(function(result, index) {
 					var rendered = $('<div>' + markdown.toHTML(result[0]) + '</div>');
 					return {
 						title: rendered.find('h1').text(),
