@@ -1,5 +1,5 @@
 $(function() {
-	page('/', function(ctx, next) {
+	page('/', function() {
 		$.get('/front.txt', function(data) {
 
 			links = data.split('\n').map(function(l) { return l.trim(); });
@@ -67,13 +67,13 @@ $(function() {
 		});
 	});
 
-	page('/story/:title', function(ctx, next) {
+	page('/story/:title', function(ctx) {
 		$.get('/stories/' + ctx.params.title + '.md', function(data) {
 			$('#container').html(markdown.toHTML(data)).removeClass();
 		});
 	});
 
-	page('/series/:series', function(ctx, next) {
+	page('/series/:series', function(ctx) {
 		var ids = [];
 		for (var i = 1; i <= 32; i++) {
 			var num = i;
