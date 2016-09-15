@@ -11,4 +11,4 @@ His life spiralled down rapidly.  The same old story � drinking, late nights, 
 
 What a simpleton.  Even with a degree he didn�t realise that this was a simple medical condition that affected thousands of people.  He didn�t know it yet, but it was going to get worse.  But for a some while, he was happy, so the less he knew, the better, as long as he didn�t laugh while directing a big jet to its parking stand.  But his sight grew worse.  It wasn�t aeroplanes that killed him, but a refuelling truck.  Harry saw it approaching at some speed.  He was walking right into his path, but thought it was just another chimera.  But this one was real, and it bashed the life out of him in a split second.  He probably never even knew he�d been hit by a truck.
 
-![](/images/f26.gif)
+![](/images/grids/f26.gif)

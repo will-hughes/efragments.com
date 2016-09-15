@@ -10,4 +10,4 @@ The poor kid was about 13 or 14.  He had carefully cultivated a look of dark scr
 
 My problem now is that the dawn of realization that hit while the notion of anonymity sank in seems to be something I experienced first-hand.  So now I don't know if I was the kid or the detached observer.  Perhaps one is my past, and the other is my future.
 
-![](/images/f16.gif)
+![](/images/grids/f16.gif)

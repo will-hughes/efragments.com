@@ -26,4 +26,4 @@ But instead of being honest, I dug myself deeper into my dishonesty.  Poor Rita,
 
 I realized after they left that I could probably get into this, and found that the prospect made me nervous and confused.  But Rita was a nice girl, and she was adventurous.  She was probably just what I needed.  I found Rita's hair brush on the sideboard, and was glad because the next time she came over, we could pick up where we left off, and make a little more progress.  I got to the point of really looking forward to their next visit.  In my mind, I thought through various ways that things might evolve.  But they never came back.  I kept the brush for years in case she came back.  But I never saw or heard from either of them ever again.
 
-![](/images/c30.gif)
+![](/images/grids/c30.gif)

@@ -14,4 +14,4 @@ Now I begin to understand why people study art.  I used to wonder why they did n
 
 Finally, I see that even the production of primitive and simple images that seem totally unconnected to anything in the modern art world can be explained by reference to entoptic art or to cave art.  In other words, even this obscure form of expression does not exist in isolation from cultural roots of some form.  It is quite clear that all art connects to the human condition in some way or another, and that it is rare to invent a whole new language.  And if one did invent a whole new language, well no one else would understand it!   Thus, Ron's inability to explain who he was emulating when he produced something at school was not a s sign that the teacher was limiting them to mere replication of what has gone before, but a sign that the teacher was failing to get Ron to understand the context and language of his own work.
 
-![](/images/a19.gif)
+![](/images/grids/a19.gif)

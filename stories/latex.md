@@ -34,4 +34,4 @@ We parked up and got out simultaneously.  There was no one around, although the 
 
 I often think back to that crazy day and mad girl.  I sometimes wonder about going back for another visit, but it was such a strange time of my life that I would really rather not.
 
-![](/images/f22.gif)
+![](/images/grids/f22.gif)

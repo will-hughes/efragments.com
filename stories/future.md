@@ -26,4 +26,4 @@ I am confused and annoyed.  But I always feel like this with him, so it is famil
 
 I am standing rooted to the spot, trembling, wondering how that could have happened so quickly, so stupidly.  After what seems like ages, I walk to the edge to peer gingerly over.  It is a long way down, but I can make out a crumpled misshapen bloody heap at the foot of the cliff.  It seems that I ought to feel despair, regret or something.  But I just feel the extreme irony of witnessing this just before my time is due, and then I start to worry that the manner of that fall was horribly familiar.  I look at my watch and see that it shortly after 11.15. The time has passed!  I am staggered.  My mixed emotion is replaced with elation as I realize that it was not the end of my life that I had come here for, but the end of the tyranny of being the offspring of a man like that.  I leave the place with the feeling that an immense weight has been lifted from my life.  I have not felt this free in years.  Now this is what I call born again, I shout to myself, as the car surges easily south.
 
-![](/images/a27.gif)
+![](/images/grids/a27.gif)

@@ -13,4 +13,4 @@ This tale excited Tom.  He quietly absorbed the details and salted them away, th
 
 But the association of ideas was finally complete: recurring crimes, discrete windows in rarely visited flats and guns.  Tom decided that he wanted to be a sniper.
 
-![](/images/e26.gif)
+![](/images/grids/e26.gif)

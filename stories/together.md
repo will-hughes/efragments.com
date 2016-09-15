@@ -39,4 +39,4 @@ The traffic noise was quite loud by now, with several buses rattling their way t
 
 I was beginning to feel as though I was completely out of synchronization with everything going on around me, and wanted to re-wind the last few days and start over again.  But I wondered how far I would have to re-wind it.  A lot of things had been going wrong for a long time.
 
-![](/images/f26.gif)
+![](/images/grids/f26.gif)

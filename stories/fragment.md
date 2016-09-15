@@ -16,4 +16,4 @@ An indeterminate time passed before I regained consciousness. I was very hungry,
 
 Finally, I awoke one morning to find a young girl, perhaps twelve, trickling water in to my mouth. She was startled as I spluttered awake, and said something in an unfamiliar language, but the sentiment was clearly soothing. I knew she had nursed me and kept me alive; I knew I was weak.
 
-![](/images/f32.gif)
+![](/images/grids/f32.gif)
