@@ -1,0 +1,21 @@
+{
+  "name": "efragments",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "npm run build",
+    "build": "npm run sass",
+    "sass": "node-sass sass/ -o public/css/"
+  },
+  "engines": {
+    "node": "6.2.2"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "marked": "^0.3.6",
+    "node-sass": "^3.10.0",
+    "nunjucks": "^2.5.2"
+  }
+}

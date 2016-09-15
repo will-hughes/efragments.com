@@ -1,0 +1,9 @@
+{% extends '../layout.html' %}
+
+{% block content %}
+	{% for story in stories %}
+	<a href="/{{ story.key }}">
+		<h3>{{ story.title }}</h3>
+	</a>
+	{% endfor %}
+{% endblock %}
