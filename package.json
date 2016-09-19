@@ -4,8 +4,8 @@
   "private": true,
   "description": "",
   "scripts": {
-    "start": "npm run build && node server.js",
-    "dev": "npm run build && nodemon server.js",
+    "dev": "npm run build && nodemon web.js",
+    "web": "npm run build && node web.js",
     "build": "npm run sass",
     "sass": "node-sass sass/ -o public/css/",
     "worker": "node worker.js",
