@@ -8,7 +8,10 @@
     "dev": "npm run build && nodemon server.js",
     "build": "npm run sass",
     "sass": "node-sass sass/ -o public/css/",
-    "worker": "echo 'No worker defined' && exit 0"
+    "worker": "node worker.js",
+    "redis": "npm run _redis-stop && npm run _redis-start",
+    "_redis-stop": "docker rm -f redis || exit 0",
+    "_redis-start": "docker run -d -p 6379:6379 --name redis redis"
   },
   "engines": {
     "node": "6.2.2"
@@ -17,7 +20,8 @@
     "express": "^4.14.0",
     "marked": "^0.3.6",
     "node-sass": "^3.10.0",
-    "nunjucks": "^2.5.2"
+    "nunjucks": "^2.5.2",
+    "redis": "^2.6.2"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"
