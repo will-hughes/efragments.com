@@ -7,7 +7,8 @@
     "start": "npm run build && node server.js",
     "dev": "npm run build && nodemon server.js",
     "build": "npm run sass",
-    "sass": "node-sass sass/ -o public/css/"
+    "sass": "node-sass sass/ -o public/css/",
+    "worker": "echo 'No worker defined' && exit 0"
   },
   "engines": {
     "node": "6.2.2"
