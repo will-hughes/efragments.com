@@ -4,8 +4,8 @@
   "private": true,
   "description": "",
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "npm run build",
+    "start": "npm run build && node server.js",
+    "dev": "npm run build && nodemon server.js",
     "build": "npm run sass",
     "sass": "node-sass sass/ -o public/css/"
   },
@@ -17,5 +17,8 @@
     "marked": "^0.3.6",
     "node-sass": "^3.10.0",
     "nunjucks": "^2.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }
