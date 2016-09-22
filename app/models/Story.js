@@ -1,29 +1,36 @@
-let lipsum = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>';
+const {
+	throughCache
+} = require('../controllers/Cache');
 
-let stories = [
-	{ title: 'Lorem', content: lipsum },
-	{ title: 'Ipsum', content: lipsum },
-	{ title: 'Dolor', content: lipsum },
-	{ title: 'Sit', content: lipsum },
-	{ title: 'Amet', content: lipsum },
-	{ title: 'Consectetur', content: lipsum },
-	{ title: 'Adipiscing', content: lipsum },
-	{ title: 'Elit', content: lipsum },
-	{ title: 'Sed', content: lipsum },
-	{ title: 'Do', content: lipsum },
-	{ title: 'Eiusmod', content: lipsum },
-	{ title: 'Tempor', content: lipsum },
-	{ title: 'Incididunt', content: lipsum }
-].map(s => {
-	s.key = s.title.toLowerCase();
-	s.content = `<h3>${s.title}</h3>` + '\n\n' + s.content;
-	return s;
+const request = require('request-promise');
+const marked = require('marked');
+
+const prefix = process.env.STORY_PREFIX;
+
+let splitLines = content => content.split(/\r?\n/).filter(Boolean);
+
+let getList = () => throughCache('list', 10, () => request(`${prefix}/stories.txt`)).then(splitLines);
+
+let getStory = story => throughCache(story, 10, () => request(`${prefix}/stories/${story}.md`));
+
+let toMarkdown = content => marked(content);
+
+let extractMeta = content => /<h1 id="(.+)">(.+)</.exec(content).slice(1, 3);
+
+let serialize = content => ({
+	id: extractMeta(content)[0],
+	title: extractMeta(content)[1],
+	content
 });
 
 module.exports = {
-	all: () => stories,
+	all: () => getList()
+		.then(links => links.map(getStory))
+		.then(Promise.all.bind(Promise))
+		.then(stories => stories.map(toMarkdown))
+		.then(stories => stories.map(serialize)),
 
-	find: (key) => stories.find(story => story.key === key),
-
-	where: (prop, val) => stories.filter(story => story[prop] === val)
+	find: (id) => getStory(id)
+		.then(toMarkdown)
+		.then(serialize),
 };

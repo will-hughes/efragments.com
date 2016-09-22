@@ -8,7 +8,6 @@
     "web": "npm run build && node web.js",
     "build": "npm run sass",
     "sass": "node-sass sass/ -o public/css/",
-    "worker": "node worker.js",
     "redis": "npm run _redis-stop && npm run _redis-start",
     "_redis-stop": "docker rm -f redis || exit 0",
     "_redis-start": "docker run -d -p 6379:6379 --name redis redis"
@@ -21,7 +20,8 @@
     "marked": "^0.3.6",
     "node-sass": "^3.10.0",
     "nunjucks": "^2.5.2",
-    "redis": "^2.6.2"
+    "redis": "^2.6.2",
+    "request-promise": "^4.1.1"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"

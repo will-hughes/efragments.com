@@ -10,11 +10,14 @@ html {
 }
 
 body {
-	font-family: Lato, sans-serif;
-	margin: auto;
-	max-width: 768px;
-	color: #555;
+	font-family: Merriweather, sans-serif;
+	color: #333;
 	padding: 1em;
+}
+
+h1, h2, h3 {
+	font-family: Merriweather, sans-serif;
+	font-weight: 300;
 }
 
 nav {
@@ -44,37 +47,53 @@ a:hover {
 	opacity: 0.5;
 }
 
-.nav-list a {
-	display: block;
-}
-
-.nav-list em {
-	display: block;
-	opacity: 0.5;
-}
-
-h1, h2, h3 {
-	font-family: Lato, sans-serif;
-	font-weight: normal;
-}
-
 header, footer {
 	color: #ccc;
+	text-align: right;
+
+	margin: auto;
+}
+
+header {
+	h1 {
+		margin-top: 0;
+	}
 }
 
 footer {
-	text-align: right;
-	border-top: 1px solid #ddd;
 	padding: 1em 0;
 	margin-top: 3em;
+
+	p {
+		margin: 0;
+	}
 }
 
-footer p {
-	margin: 0;
-}
+article {
+	margin: auto;
+	max-width: 768px;
 
-article img {
-	width: 100px;
-	margin: 2em auto;
-	display: block;
+	hr {
+		width: 33%;
+		margin-left: 0;
+		border-width: 2px;
+		border-color: black;
+	}
+
+	p {
+		font-weight: 300;
+		line-height: 2rem;
+
+		&:first-of-type {
+			border-top: 4px solid #333;
+			padding-top: 2rem;
+			margin-top: 1rem;
+		}
+	}
+
+	img {
+		width: 100px;
+		margin: 2em auto;
+		display: block;
+	}
 }

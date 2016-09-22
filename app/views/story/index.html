@@ -2,8 +2,9 @@
 
 {% block content %}
 	{% for story in stories %}
-	<a href="/{{ story.key }}">
-		<h3>{{ story.title }}</h3>
-	</a>
+	<div>
+		<h2><a href="/{{ story.id }}">{{ story.title }}</a></h2>
+		<hr/>
+	</div>
 	{% endfor %}
 {% endblock %}

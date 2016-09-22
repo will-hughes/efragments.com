@@ -3,6 +3,9 @@ const nunjucks = require('./app/nunjucks');
 const path = require('path');
 const port = process.env.PORT || 8000;
 const router = require('./app/router');
+const client = require('redis').createClient({
+	url: process.env.REDIS_URL
+});
 
 var app = express();
 
