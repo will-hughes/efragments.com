@@ -2,6 +2,8 @@ const client = require('redis').createClient({
 	url: process.env.REDIS_URL || null
 });
 
+const cacheTime = process.env.CACHE_TIME;
+
 module.exports = {
 	index: (req, res) => {
 		let response = {};
@@ -26,6 +28,12 @@ module.exports = {
 	},
 
 	throughCache: (key, ttl, create) => new Promise((resolve, reject) => {
+
+		if (typeof create === 'undefined') {
+			create = ttl;
+			ttl = cacheTime;
+		}
+
 		client.get(key, (err, result) => {
 			if (err) return reject(err);
 			if (result) return resolve(JSON.parse(result));

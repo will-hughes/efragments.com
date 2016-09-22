@@ -9,9 +9,9 @@ const prefix = process.env.STORY_PREFIX;
 
 let splitLines = content => content.split(/\r?\n/).filter(Boolean);
 
-let getList = () => throughCache('list', 10, () => request(`${prefix}/stories.txt`)).then(splitLines);
+let getList = () => throughCache('list', () => request(`${prefix}/stories.txt`)).then(splitLines);
 
-let getStory = story => throughCache(story, 10, () => request(`${prefix}/stories/${story}.md`));
+let getStory = story => throughCache(story, () => request(`${prefix}/stories/${story}.md`));
 
 let toMarkdown = content => marked(content);
 
