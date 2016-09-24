@@ -1,3 +1,5 @@
+const entities = new (require('html-entities').AllHtmlEntities)();
+
 const client = require('redis').createClient({
 	url: process.env.REDIS_URL || null
 });
@@ -14,9 +16,10 @@ module.exports = {
 					client.get(key, (err, value) => {
 						if (err) return res.send(err);
 						client.ttl(key, (err, ttl) => {
+							if (err) return res.send(err);
 							response[`${key}-${ttl}`] = value;
 							if (Object.keys(response).length === keys.length) {
-								res.send(response);
+								res.send(`<code><pre>${entities.encode(JSON.stringify(response, null, '\t'))}</pre></code>`);
 							}
 						});
 					});
