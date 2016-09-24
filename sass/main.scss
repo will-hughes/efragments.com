@@ -72,6 +72,7 @@ footer {
 article {
 	margin: auto;
 	max-width: 768px;
+	font-weight: 300;
 
 	hr {
 		width: 33%;
@@ -81,7 +82,6 @@ article {
 	}
 
 	p {
-		font-weight: 300;
 		line-height: 2rem;
 
 		&:first-of-type {
