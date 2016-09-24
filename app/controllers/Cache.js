@@ -30,6 +30,20 @@ module.exports = {
 		});
 	},
 
+	destroy: (req, res) => {
+		client.keys('*', (err, keys) => {
+			if (err) return res.send(err);
+			if (keys.length) {
+				keys.forEach((key) => {
+					client.del(key);
+				});
+				res.sendStatus(200);
+			} else {
+				res.sendStatus(404);
+			}
+		});
+	},
+
 	throughCache: (key, ttl, create) => new Promise((resolve, reject) => {
 
 		if (typeof create === 'undefined') {
