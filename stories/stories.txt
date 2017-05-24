@@ -1,1 +1,10 @@
-hello
+rope
+bottle
+bullet
+carrying
+cave-art
+context-of-art
+fragment
+the-future
+the-blue-hairbrush
+latex-girl
