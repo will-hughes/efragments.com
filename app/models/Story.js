@@ -1,17 +1,18 @@
-const {
-	throughCache
-} = require('../controllers/Cache');
-
-const request = require('request-promise');
 const marked = require('marked');
+const fs = require('fs');
 
-const prefix = process.env.STORY_PREFIX;
+const load = filename => new Promise((resolve, reject) => {
+	fs.readFile(`stories/${filename}`, `utf-8`, (err, data) => {
+		if (err) return reject(err);
+		return resolve(data);
+	});
+});
 
 let splitLines = content => content.split(/\r?\n/).filter(Boolean);
 
-let getList = () => throughCache('list', () => request(`${prefix}/stories.txt`)).then(splitLines);
+let getList = () => load(`stories.txt`).then(splitLines);
 
-let getStory = story => throughCache(story, () => request(`${prefix}/stories/${story}.md`));
+let getStory = story => load(`stories/${story}.md`);
 
 let toMarkdown = content => marked(content);
 
