@@ -12,9 +12,6 @@
     "_redis-stop": "docker rm -f redis || exit 0",
     "_redis-start": "docker run -d -p 6379:6379 --name redis redis"
   },
-  "engines": {
-    "node": "6.2.2"
-  },
   "dependencies": {
     "express": "^4.14.0",
     "html-entities": "^1.2.0",
