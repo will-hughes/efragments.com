@@ -1,13 +1,10 @@
 {{ define "main" }}
-	<main aria-role="main">
-		<header class="homepage-header">
-			<h1>{{.Title}}</h1>
-		</header>
-		<div>
-			<!-- Note that .Pages is the same as .Site.RegularPages on the homepage template. -->
-			{{ range .Pages }}
-				<p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-			{{ end }}
-		</div>
-	</main>
+<article>
+	{{ range .Pages }}
+	<div>
+		<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		<hr/>
+	</div>
+	{{ end }}
+</article>
 {{ end }}

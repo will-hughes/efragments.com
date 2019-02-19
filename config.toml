@@ -1,8 +1,17 @@
 baseURL = "https://efragments.com"
 languageCode = "en-gb"
-title = "Efragments"
+title = "efragments"
 publishdir = "dist"
 assetdir = "."
+
+[params]
+author = "Will Hughes"
+authorimage = "/img/headshot.png"
+dateformat = "1 January 2000"
+
+[params.font]
+name = "Merriweather"
+weights = "300,400"
 
 [permalinks]
 notes = "/:title/"

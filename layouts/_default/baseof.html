@@ -2,18 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ block "title" . }}
-      <!-- Blocks may include default content. -->
-      {{ .Site.Title }}
-    {{ end }}</title>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+	<link rel="stylesheet" href="/style/main.css">
+
+	<!-- Auto-generated Hugo generated-by tags -->
+	{{ .Hugo.Generator }}
+
+	<!-- RSS feed support -->
+	{{ range .AlternativeOutputFormats -}}
+		<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+	{{ end }}
+
+	<!-- Google fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.Font.Name }}:{{ .Site.Params.Font.Weights }}" >
+	<style media="screen">html { font-family: "{{ .Site.Params.Font.Name }}"; }</style>
   </head>
   <body>
-    <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-    {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-    {{ end }}
+	{{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
   </body>
 </html>
