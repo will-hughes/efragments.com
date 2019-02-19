@@ -1,6 +1,8 @@
-# Fragment
-
-_12 May 2005_
+---
+title: "Fragment"
+date: 2005-05-12
+draft: false
+---
 
 I was in a dull stupor, barely able to keep awake, perhaps already asleep, it was impossible to tell. The ground under foot was soft and wet; squishy, although I think I was shod. Long grass soaked my trouser legs with a cold, clingy dampness. It was so dark; black, drizzly and very cold.
 

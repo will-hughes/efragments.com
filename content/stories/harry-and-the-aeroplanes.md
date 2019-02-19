@@ -1,6 +1,8 @@
-# Harry and the aeroplanes
-
-_15 May 2005_
+---
+title: "Harry and the aeroplanes"
+date: 2005-05-15
+draft: false
+---
 
 The trouble with Harry was the annoying appearance of the nose cone of a large aeroplane, just at the edge of his field of vision, whenever he was happy.  It was a curse.  It started when he was about 21.  Round about the time he graduated.  Just at that time, there was a lot of emotion in his life.  All the friends he had made at University were going in separate directions.  They had been a great crowd for three years, living through all sorts of ups and downs.  Some were going to get married to each other soon, but Harry had no idea where he was headed.  He had bombed out on all the job interviews and had little to look forward to other than uncertainty.  But his friends made him laugh and they made him happy.  And when he laughed, the bulbous nose cone of a large aircraft started to edge into his field of vision, and disappeared as soon as he looked towards it.  And he immediately stopped laughing.  Every time, the same thing.  Someone would say something funny, and Harry would start to smile, then just as quickly he would scowl or frown as he looked furtively away from the speaker.  No one knew why he was being so miserable, he hadn�t told them.  They assumed he was tired, hung over, or just miserable about leaving University.
 

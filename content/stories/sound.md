@@ -1,4 +1,8 @@
-# The speed of sound
+---
+title: "The speed of sound"
+date: 2005-05-15
+draft: false
+---
 
 ## 1
 

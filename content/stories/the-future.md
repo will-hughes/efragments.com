@@ -1,6 +1,8 @@
-# The future
-
-_Jan-March 2003_
+---
+title: "The future"
+date: 2003-01-15
+draft: false
+---
 
 I know what is going to happen and when.  I know the details of my imminent death: I've had a dream.
 

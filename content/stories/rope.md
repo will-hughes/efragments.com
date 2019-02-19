@@ -1,6 +1,8 @@
-# Rope
-
-_21 October 2002_
+---
+title: "Rope"
+date: 2002-10-21
+draft: false
+---
 
 The rope was not too thick to wrap my hand around easily, yet not so thin that it could not be gripped firmly. It was, perhaps, the ideal thickness for holding on to. I am not sure now when I first became aware of it. But I was standing in a dark place: totally dark. Perhaps I had become blind, but a dim light in the far distance made me doubt this. I recall that I was standing in the dark, facing this distant, dim light - an almost imperceptible lessening of the black, rather than a definite illumination. I think the first real description that popped into my mind was as pale as reflected starlight. But that was not right: it wasn't pale.
 

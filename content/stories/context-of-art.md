@@ -1,6 +1,8 @@
-# Context of art
-
-_2 June 2003_
+---
+title: "Context of art"
+date: 2003-06-02
+draft: false
+---
 
 Ron hated art at school.  Not that he was unable, he was very able.  He painted and drew beautifully, with an excellent technique.  He just could never settle into the way that art was taught.  There were plenty of kids who had little technical ability, and they were no-hopers, for most purposes.  They were never going to be able to achieve the kind of form and beauty that Ron was capable of.  But he always found himself struggling to deal with the teacher, who wanted to know at every point whose style he was emulating.  He used to struggle to tell the teacher that he was following no one's style but his own.  I found it intriguing that he could not articulate this at the time. Apparently he just mumbled or went quiet or something.  So he never really had this one out and therefore never resolved it.  His favourite medium was acrylic paint and he liked to produce elegant pictures with hidden objects that were equally elegant in their form, but difficult to discern at first.  Once you knew they were there, you could never fail to spot them.
 

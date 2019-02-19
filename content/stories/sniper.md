@@ -1,4 +1,8 @@
-# The sniper
+---
+title: "The sniper"
+date: 2005-05-15
+draft: false
+---
 
 Disgruntled, disillusioned, fed up, Tom was really feeling the tension build in him whenever he saw things that annoyed him.  Yesterday, he was walking to work, the daily grind, and saw the familiar pile of shattered car window on the footpath that told the tale of yet another car break-in and probable theft of the car radio-CD system.  It was really hacking him off.  Every day things were going wrong for all sorts of people and no one was doing anything about it.  These little piles of glass were to be found in any street and in any town.
 

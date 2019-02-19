@@ -1,6 +1,9 @@
-# Carrying
+---
+title: "Carrying"
+date: 2006-05-29
+draft: false
+---
 
-_29 April 2006_
 I carry my future around just like my past: not quite sure if I can remember what it is and certainly unable to work out what it means.  Like the boy in the record shop, once.  Was his a future I once looked forward to?
 
 The poor kid was about 13 or 14.  He had carefully cultivated a look of dark scruffiness, hair low over the face to conceal freckles  and spots, shapeless jacket to conceal a total lack of posture.  Both tactics failed dismally and only drew attention to these bodily defects, which would otherwise have been unnoticeable and perfectly acceptable.  He wasn't really ugly, just far more ungainly than he needed to be.  A couple of the trendy, lithe, black-clad shop assistants were next to him, the second one offering support and strength to the voluble one.  He was talking earnestly but rudely to this boy, and on the pretext of checking out the older vinyl releases, I moved myself casually within earshot, and was depressed to hear what was going on.

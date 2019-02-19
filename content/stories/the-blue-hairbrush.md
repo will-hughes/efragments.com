@@ -1,4 +1,8 @@
-# The blue hairbrush
+---
+title: "The blue hairbrush"
+date: 2005-02-20
+draft: false
+---
 
 _20 February 2005_
 

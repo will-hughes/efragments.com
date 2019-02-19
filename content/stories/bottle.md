@@ -1,6 +1,8 @@
-# Bottle
-
-_7 May 2005_
+---
+title: "Bottle"
+date: 2015-05-07
+draft: false
+---
 
 My first flat on leaving home at the age of 17 was a bedsit about 2 miles from my mother’s house. Three months prior to my move, she had given me three months notice to quit the family nest, due to the complete impossibility of my being able to fit in with any semblance of family life. When announced the fact of my new flat and my impending departure by the due date, her obvious surprise revealed that she had only been angry or frustrated with my lifestyle, and had not really intended for me to leave. But it was too late for me. I was committed and had high hopes.
 

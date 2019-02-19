@@ -1,6 +1,8 @@
-# Latex girl
-
-_16 January 2005_
+---
+title: "Latex girl"
+date: 2005-01-16
+draft: false
+---
 
 The little hill town was full of excitement. My friend Joseph was in a local election competing with three others and I was over to watch the fun and lend him moral support. The journey over had taken its toll on me, as travelling often can, but it was great to finally be in this town that I had heard so much about.
 

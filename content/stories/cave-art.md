@@ -1,6 +1,8 @@
-# Cave art
-
-_20 July 2003_
+---
+title: "Cave art"
+date: 2003-07-20
+draft: false
+---
 
 Man has daubed since the earliest times.  All over the world there are examples of early art.  From Australia to California, from France to South Africa, there are paintings recording the earliest traces of civilisation.  The aboriginal art of Australia was thought to be about 40,000 years old until new dating techniques seemed to push this back to 60,000 years.  Much of the cave art around the world is up to 40,000 years old and frequently consists of animals, weapons, human figures and so forth.  Given that they were daubing on walls, it is not so surprising that humans in various parts of the world at that time chose to portray the important things in their lives in various types of figurative art.  What is much more surprising, and constant, is the incidence of abstract shapes and patterns, particularly when the shapes and patterns share common features across the wide variety of locations and, presumably, cultures.
 
