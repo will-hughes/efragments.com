@@ -1,0 +1,27 @@
+{
+	"name": "efragments.com",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"start": "hugo server --buildDrafts --buildFuture --port 3000",
+		"prestart": "opn http://localhost:3000",
+		"clean": "rimraf dist",
+		"prepare": "npm run clean",
+		"deploy": "surge --domain https://efragments.com dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dan1elhughes/efragments.git"
+	},
+	"keywords": [],
+	"author": "Dan Hughes",
+	"bugs": {
+		"url": "https://github.com/dan1elhughes/efragments/issues"
+	},
+	"homepage": "https://github.com/dan1elhughes/efragments#readme",
+	"devDependencies": {
+		"opn-cli": "^4.0.0",
+		"rimraf": "^2.6.3",
+		"surge": "^0.20.1"
+	}
+}

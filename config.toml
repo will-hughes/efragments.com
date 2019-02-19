@@ -1,0 +1,22 @@
+baseURL = "https://efragments.com"
+languageCode = "en-gb"
+title = "Efragments"
+publishdir = "dist"
+assetdir = "."
+
+[permalinks]
+notes = "/:title/"
+
+[params.unpkg]
+css = [
+	"normalize.css/normalize.css",
+	"highlightjs/styles/solarized-dark.css"
+]
+js = [
+	"highlightjs/highlight.pack.js"
+]
+
+[[menu.main]]
+name = "notes"
+identifier = "notes"
+url = "/notes"
