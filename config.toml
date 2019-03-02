@@ -19,13 +19,4 @@ notes = "/:title/"
 [params.unpkg]
 css = [
 	"normalize.css/normalize.css",
-	"highlightjs/styles/solarized-dark.css"
 ]
-js = [
-	"highlightjs/highlight.pack.js"
-]
-
-[[menu.main]]
-name = "notes"
-identifier = "notes"
-url = "/notes"
